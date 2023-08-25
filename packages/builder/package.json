@@ -1,6 +1,6 @@
 {
   "name": "@typelink/builder",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "commonjs",
   "peerDependencies": {
     "typescript": "4.x || 5.x"
