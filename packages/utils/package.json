@@ -1,17 +1,17 @@
 {
-  "name": "@typelink/builder",
-  "version": "0.0.3",
+  "name": "@typelink/utils",
+  "version": "0.0.1-rc.1",
   "type": "commonjs",
   "peerDependencies": {
     "typescript": "4.x || 5.x"
   },
   "devDependencies": {
     "@types/node": "18.7.1",
-    "typescript": "~5.0.2",
-    "@types/micromatch": "^4.0.2"
+    "typescript": "~5.0.2"
   },
   "dependencies": {
     "fast-glob": "^3.3.1",
+    "@types/micromatch": "^4.0.2",
     "micromatch": "^4.0.5"
   }
 }

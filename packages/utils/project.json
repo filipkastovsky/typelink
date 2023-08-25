@@ -1,33 +1,33 @@
 {
-  "name": "builder",
+  "name": "utils",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/builder/src",
+  "sourceRoot": "packages/utils/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/builder"
+        "outputPath": "dist/packages/utils"
       }
     },
     "publish": {
-      "command": "node tools/scripts/publish.mjs builder {args.ver} {args.tag}",
+      "command": "node tools/scripts/publish.mjs utils {args.tag}",
       "dependsOn": ["build"]
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/packages/builder"],
+      "outputs": ["coverage/packages/utils"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/packages/builder"
+        "reportsDirectory": "../../coverage/packages/utils"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/builder/**/*.ts"]
+        "lintFilePatterns": ["packages/utils/**/*.ts"]
       }
     }
   },

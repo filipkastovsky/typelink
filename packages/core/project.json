@@ -12,7 +12,7 @@
       }
     },
     "publish": {
-      "command": "node tools/scripts/publish.mjs core {args.ver} {args.tag}",
+      "command": "node tools/scripts/publish.mjs core {args.tag}",
       "dependsOn": ["build"]
     },
     "test": {

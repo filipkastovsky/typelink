@@ -12,7 +12,7 @@
       }
     },
     "publish": {
-      "command": "node tools/scripts/publish.mjs astro {args.ver} {args.tag}",
+      "command": "node tools/scripts/publish.mjs astro {args.tag}",
       "dependsOn": ["build"]
     },
     "test": {

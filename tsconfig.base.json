@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@typelink/builder": ["packages/builder/src/index.ts"],
+      "@typelink/utils": ["packages/utils/src/index.ts"],
       "@typelink/core": ["packages/core/src/index.ts"]
     }
   },

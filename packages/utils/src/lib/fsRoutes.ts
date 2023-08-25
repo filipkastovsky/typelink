@@ -1,4 +1,9 @@
 import { glob } from 'fast-glob';
+import { isMatch } from 'micromatch';
+
+export const matches = (path: string, globExp: string) => {
+  return isMatch(path, globExp);
+};
 
 export const toRelative = (path: string, cwd: string) => {
   return path.replace(/\\/g, '/').replace(cwd, '');

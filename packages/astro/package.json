@@ -1,6 +1,6 @@
 {
   "name": "@typelink/adapter-astro",
-  "version": "0.0.3",
+  "version": "0.0.1-rc.1",
   "type": "commonjs",
   "peerDependencies": {
     "astro": "2.x"
@@ -9,6 +9,6 @@
     "astro": "^2.10.0"
   },
   "dependencies": {
-    "@typelink/builder": "workspace:*"
+    "@typelink/utils": "workspace:*"
   }
 }

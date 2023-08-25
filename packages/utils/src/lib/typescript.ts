@@ -1,8 +1,6 @@
 import ts from 'typescript';
 import fs from 'node:fs/promises';
 
-export { isMatch } from 'micromatch';
-
 export const createPrinter = () => {
   return ts.createPrinter({ newLine: ts.NewLineKind.LineFeed });
 };
