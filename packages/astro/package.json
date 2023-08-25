@@ -1,0 +1,14 @@
+{
+  "name": "@typelink/astro",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "peerDependencies": {
+    "astro": "2.x"
+  },
+  "devDependencies": {
+    "astro": "^2.10.0"
+  },
+  "dependencies": {
+    "@typelink/builder": "workspace:*"
+  }
+}

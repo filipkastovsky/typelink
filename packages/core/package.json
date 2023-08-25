@@ -1,21 +1,5 @@
 {
   "name": "@typelink/core",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
-  "private": true,
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.58.0",
-    "@vitest/coverage-c8": "^0.31.0",
-    "@vitest/ui": "^0.31.0",
-    "eslint": "~8.15.0",
-    "lint-staged": "^13.2.2",
-    "tslib": "^2.6.1",
-    "typescript": "~5.0.2",
-    "vite": "^4.3.4",
-    "vite-plugin-eslint": "^1.8.1",
-    "vite-tsconfig-paths": "^4.0.2",
-    "vitest": "^0.31.0"
-  }
+  "version": "0.0.1",
+  "type": "commonjs"
 }
