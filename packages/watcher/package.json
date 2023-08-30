@@ -1,14 +1,14 @@
 {
-  "name": "@typelink/adapter-astro",
+  "name": "@typelink/watcher",
   "version": "0.0.1-rc.2",
   "type": "commonjs",
   "peerDependencies": {
-    "astro": "2.x"
+    "chokidar": "^3.5.3"
   },
   "devDependencies": {
-    "astro": "^2.10.0"
+    "chokidar": "^3.5.3"
   },
   "dependencies": {
-    "@typelink/watcher": "workspace:*"
+    "@typelink/utils": "workspace:*"
   }
 }

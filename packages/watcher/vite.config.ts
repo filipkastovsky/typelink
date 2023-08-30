@@ -6,7 +6,7 @@ import dts from 'vite-plugin-dts';
 import { joinPathFragments } from '@nx/devkit';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/astro',
+  cacheDir: '../../node_modules/.vite/watcher',
 
   plugins: [
     dts({
@@ -35,7 +35,7 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'astro',
+      name: 'watcher',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forgot to update your package.json as well.
@@ -43,7 +43,7 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['@typelink/watcher'],
+      external: ['@typelink/utils', 'chokidar'],
     },
   },
 

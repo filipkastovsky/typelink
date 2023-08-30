@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@typelink/utils": ["packages/utils/src/index.ts"],
-      "@typelink/core": ["packages/core/src/index.ts"]
+      "@typelink/core": ["packages/core/src/index.ts"],
+      "@typelink/watcher": ["packages/watcher/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

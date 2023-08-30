@@ -95,9 +95,9 @@ importers:
 
   dist/packages/astro:
     dependencies:
-      '@typelink/utils':
+      '@typelink/watcher':
         specifier: workspace:*
-        version: link:../../../packages/utils
+        version: link:../../../packages/watcher
     devDependencies:
       astro:
         specifier: ^2.10.0
@@ -124,11 +124,21 @@ importers:
         specifier: ~5.0.2
         version: 5.0.2
 
-  packages/astro:
+  dist/packages/watcher:
     dependencies:
       '@typelink/utils':
         specifier: workspace:*
-        version: link:../utils
+        version: link:../../../packages/utils
+    devDependencies:
+      chokidar:
+        specifier: ^3.5.3
+        version: 3.5.3
+
+  packages/astro:
+    dependencies:
+      '@typelink/watcher':
+        specifier: workspace:*
+        version: link:../watcher
     devDependencies:
       astro:
         specifier: ^2.10.0
@@ -154,6 +164,16 @@ importers:
       typescript:
         specifier: ~5.0.2
         version: 5.0.2
+
+  packages/watcher:
+    dependencies:
+      '@typelink/utils':
+        specifier: workspace:*
+        version: link:../utils
+    devDependencies:
+      chokidar:
+        specifier: ^3.5.3
+        version: 3.5.3
 
 packages:
 
@@ -2786,7 +2806,7 @@ packages:
   /@swc/helpers@0.5.1:
     resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /@tootallnate/once@2.0.0:
