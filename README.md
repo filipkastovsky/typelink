@@ -1,6 +1,6 @@
 # Typelink
 
-Typesafe autocomplete for all your paths!
+Type-safe autocomplete for all your paths!
 
 ![Autocomplete](./media/autocomplete.png)
 
@@ -140,7 +140,7 @@ t.watcher({
 
 import NextLink from 'next/link';
 import type { ComponentProps } from 'react';
-import Href from '#typelink';
+import type Href from '#typelink';
 
 type LinkProps = Omit<ComponentProps<typeof NextLink>, 'href'> & {
   href: Href;

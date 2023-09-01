@@ -1,4 +1,4 @@
-/// <reference path="./defaults.d.ts" />
+import './defaults';
 
 export * from './lib/InferPath';
 export * from './lib/LeadingSubPath';

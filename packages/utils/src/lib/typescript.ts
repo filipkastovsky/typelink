@@ -10,6 +10,12 @@ export const createSourceFile = (filename: string) => {
 };
 
 export function generateTypeNode(identifier: string, moduleName: string, routes: string[]) {
+  const importStatement = ts.factory.createImportDeclaration(
+    undefined,
+    undefined,
+    ts.factory.createStringLiteral('@typelink/core')
+  );
+
   const typeId = ts.factory.createIdentifier(identifier);
 
   const properties = routes.map((route) =>
@@ -31,7 +37,7 @@ export function generateTypeNode(identifier: string, moduleName: string, routes:
 
   const moduleIdentifier = ts.factory.createIdentifier(`"${moduleName}"`);
 
-  const moduleBody = ts.factory.createModuleBlock([typeAlias]);
+  const moduleBody = ts.factory.createModuleBlock([importStatement, typeAlias]);
 
   const tsModule = ts.factory.createModuleDeclaration(
     [ts.factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
