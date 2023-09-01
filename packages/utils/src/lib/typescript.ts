@@ -12,15 +12,21 @@ export const createSourceFile = (filename: string) => {
 export function generateTypeNode(identifier: string, moduleName: string, routes: string[]) {
   const typeId = ts.factory.createIdentifier(identifier);
 
-  const union = ts.factory.createUnionTypeNode(
-    routes.map((route) => ts.factory.createLiteralTypeNode(ts.factory.createStringLiteral(route)))
+  const properties = routes.map((route) =>
+    ts.factory.createPropertySignature(
+      [ts.factory.createModifier(ts.SyntaxKind.ReadonlyKeyword)],
+      ts.factory.createIdentifier(`"${route}"`),
+      undefined,
+      ts.factory.createTypeLiteralNode(undefined)
+    )
   );
 
-  const typeAlias = ts.factory.createTypeAliasDeclaration(
+  const typeAlias = ts.factory.createInterfaceDeclaration(
     [ts.factory.createModifier(ts.SyntaxKind.ExportKeyword)],
     typeId,
     undefined,
-    union
+    undefined,
+    properties
   );
 
   const moduleIdentifier = ts.factory.createIdentifier(`"${moduleName}"`);

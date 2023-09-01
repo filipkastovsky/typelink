@@ -37,6 +37,5 @@ invariant(
 
 process.chdir(outputPath);
 
-// Execute "npm publish" to publish
-// execSync('pnpm install --frozen-lockfile');
+execSync('pnpm install --frozen-lockfile');
 execSync(`pnpm publish --access public --tag ${tag}`);

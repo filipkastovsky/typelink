@@ -1,7 +1,8 @@
 import type { FSWatcher } from 'chokidar';
 const DEFAULT_GLOB = '**/!(_)*.tsx';
 const DIR = '.typelink';
-const MODULE_NAME = 'typelink:routes';
+const MODULE_NAME = '#typelink';
+const INTERFACE_NAME = 'Routes';
 
 export type Options = {
   /**
@@ -66,7 +67,7 @@ export const watcher = (options: Partial<Options> = {}) => {
   const sourceFile = utils.createSourceFile('');
 
   const routes = new Set<string>();
-  const enqueue = utils.buffering(utils.printTypeNode('Routes', printer, MODULE_NAME, DIR, sourceFile, routes));
+  const enqueue = utils.buffering(utils.printTypeNode(INTERFACE_NAME, printer, MODULE_NAME, DIR, sourceFile, routes));
 
   utils.collectFSRoutes(mergedOptions.glob, `${mergedOptions.cwd}${mergedOptions.path}`).then((initialRoutes) => {
     for (const route of initialRoutes) {

@@ -9,6 +9,7 @@
     "chokidar": "^3.5.3"
   },
   "dependencies": {
-    "@typelink/utils": "workspace:*"
+    "@typelink/utils": "workspace:*",
+    "@typelink/core": "workspace:*"
   }
 }
