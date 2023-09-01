@@ -1,4 +1,5 @@
 import type { InferPath } from './InferPath';
+import { describe, it, expectTypeOf } from 'vitest';
 
 describe('InferPath', () => {
   it('should infer paths from a string literal', () => {

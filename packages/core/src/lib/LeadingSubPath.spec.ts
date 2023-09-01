@@ -1,4 +1,5 @@
 import type { LeadingSubPath } from './LeadingSubPath';
+import { describe, it, expectTypeOf } from 'vitest';
 
 describe('LeadingSubPath', () => {
   it('should return subpaths of a literal path', () => {
