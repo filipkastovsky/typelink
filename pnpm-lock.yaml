@@ -167,6 +167,9 @@ importers:
 
   packages/watcher:
     dependencies:
+      '@typelink/core':
+        specifier: workspace:*
+        version: link:../core
       '@typelink/utils':
         specifier: workspace:*
         version: link:../utils
