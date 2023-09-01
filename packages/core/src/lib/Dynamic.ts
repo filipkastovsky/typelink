@@ -1,3 +1,5 @@
+import Href from '#typelink';
+
 export namespace Dynamic {
   /**
    * A pattern used commonly with meta-frameworks using file system routing eg. NextJS, Sveltekit, SolidStart...
@@ -57,7 +59,7 @@ export namespace Dynamic {
    * @param pattern Tuple to describe the pattern used to denote a dynamic segment, eg. `['[', ']']`
    * @returns A type-safe function that takes a path and a params object and returns a path with the params interpolated
    */
-  export function create<TPath extends string, TPattern extends [string, string]>(pattern: TPattern) {
+  export function create<TPattern extends [string, string], TPath extends string = Href>(pattern: TPattern) {
     return <T extends TPath>(path: T, params: Params<T, TPattern[0], TPattern[1]>) => {
       let final: string = path;
       for (const key in params) {
