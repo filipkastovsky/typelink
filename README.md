@@ -26,11 +26,15 @@ Typesafe autocomplete for all your paths!
 # pnpm
 pnpm add @typelink/core
 pnpm add -D @typelink/adapter-astro
+```
 
+```sh
 # yarn
 yarn add @typelink/core
 yarn add -D @typelink/adapter-astro
+```
 
+```sh
 # npm
 npm install @typelink/core
 npm install -D @typelink/adapter-astro
@@ -87,11 +91,15 @@ const props = Astro.props;
 # pnpm
 pnpm add @typelink/core
 pnpm add -D @typelink/watcher
+```
 
+```sh
 # yarn
 yarn add @typelink/core
 yarn add -D @typelink/watcher
+```
 
+```sh
 # npm
 npm install @typelink/core
 npm install -D @typelink/watcher
