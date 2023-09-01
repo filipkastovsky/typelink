@@ -10,7 +10,9 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "rules": {}
+      "rules": {
+        "@typescript-eslint/triple-slash-reference": "off"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],

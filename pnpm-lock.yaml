@@ -126,6 +126,9 @@ importers:
 
   dist/packages/watcher:
     dependencies:
+      '@typelink/core':
+        specifier: workspace:*
+        version: link:../../../packages/core
       '@typelink/utils':
         specifier: workspace:*
         version: link:../../../packages/utils
