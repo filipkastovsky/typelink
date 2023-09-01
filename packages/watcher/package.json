@@ -1,6 +1,6 @@
 {
   "name": "@typelink/watcher",
-  "version": "0.0.1-rc.2",
+  "version": "0.0.1-rc.3",
   "type": "commonjs",
   "peerDependencies": {
     "chokidar": "^3.5.3"
