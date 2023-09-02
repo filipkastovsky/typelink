@@ -70,7 +70,7 @@ Now, a package `#typelink` should be available in your project. This package exp
 // components/Link.astro
 
 ---
-import type { Routes } from "#typelink";
+import type Href from "#typelink";
 
 type Props = Omit<astroHTML.JSX.AnchorHTMLAttributes, "href"> & {
   href: Routes;
