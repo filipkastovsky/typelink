@@ -52,7 +52,7 @@ import { Dynamic } from '@typelink/core';
 export const dyn = Dynamic.create(Dynamic.square); // when using `[param]` schema
 ```
 
-> `Dynamic.create` creates a very thin utility that replaces dynamic segments with the provided values. Unmatched values will be used as query params. **Typelink will not validate anything**. When using passing values to this function, **make sure it is actually the required shape**. We strongly recommend to use a library like [zod](https://zod.dev/) **to validate inputs** before passing the value to `dyn`.
+> `Dynamic.create` creates a very thin utility that replaces dynamic segments with the provided values. **Typelink will not validate anything**. When passing values to this function, **make sure they are actually the required shape**. We strongly recommend to use a library like [zod](https://zod.dev/) **to validate inputs** before passing values to `dyn`.
 
 ```tsx
 import { dyn } from './anyFile';
