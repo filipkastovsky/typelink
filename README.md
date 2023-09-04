@@ -70,7 +70,7 @@ Now, a package `#typelink` should be available in your project. This package exp
 // components/Link.astro
 
 ---
-import type Href from "#typelink";
+import type { Href } from "#typelink";
 
 type Props = Omit<astroHTML.JSX.AnchorHTMLAttributes, "href"> & {
   href: Routes;
@@ -140,7 +140,7 @@ t.watcher({
 
 import NextLink from 'next/link';
 import type { ComponentProps } from 'react';
-import type Href from '#typelink';
+import type { Href } from '#typelink';
 
 type LinkProps = Omit<ComponentProps<typeof NextLink>, 'href'> & {
   href: Href;
