@@ -56,12 +56,18 @@ describe('Dynamic', () => {
 
   it('should replace query params and path params', () => {
     const path = '/foo/[param]/[param2]';
-    const dyn = Dynamic.create<Dynamic.Square, { [path]: Query<{ qParam0: string; qParam1?: string }> }, typeof path>(
-      Dynamic.square
-    );
+    const path2 = '/foo/[param]';
+
+    const dyn = Dynamic.create<
+      Dynamic.Square,
+      { [path]: Query<{ qParam0: string; qParam1?: string }>; [path2]: Query<{ qParam2: string }> },
+      typeof path | typeof path2
+    >(Dynamic.square);
 
     expect(dyn('/foo/[param]/[param2]', { param: 'bar', param2: 'baz', qParam0: 'qux', qParam1: 'quux' })).toBe(
       '/foo/bar/baz?qParam0=qux&qParam1=quux'
     );
+
+    expect(dyn('/foo/[param]', { param: 'bar', qParam2: 'qux' })).toBe('/foo/bar?qParam2=qux');
   });
 });

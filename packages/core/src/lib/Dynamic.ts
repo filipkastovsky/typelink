@@ -80,7 +80,7 @@ export namespace Dynamic {
     TRoutes extends Record<string, any> = Routes,
     TPath extends string = Href
   >(pattern: TPattern) {
-    return <T extends TPath>(path: T, params: Params<T, TPattern[0], TPattern[1]> & QueryParams<TRoutes, TPath>) => {
+    return <T extends TPath>(path: T, params: Params<T, TPattern[0], TPattern[1]> & QueryParams<TRoutes, T>) => {
       let final: string = path;
       const query = new URLSearchParams();
 

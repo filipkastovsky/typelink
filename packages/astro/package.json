@@ -1,6 +1,6 @@
 {
   "name": "@typelink/adapter-astro",
-  "version": "0.0.1-rc.6",
+  "version": "0.0.1-rc.7",
   "type": "commonjs",
   "peerDependencies": {
     "astro": "2.x"
