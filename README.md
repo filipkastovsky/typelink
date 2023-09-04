@@ -264,23 +264,8 @@ type MyRoutes = InferPath<{
 
 Doing this will generate a union of all the routes defined in the object. You can then use `FromUnion` to add them to your `Routes` type.
 
-#### `SubPath` and `LeadingSubPath`
-
-Don't feel like typing out the full path? We got you covered! You can use `SubPath` and `LeadingSubPath` to create all the possible sub-paths of a given path.
-
-> `SubPath` will include `""` if the path starts with a separator, use `LeadingSubPath` if you want to exclude it.
-
-```ts
-import type { SubPath, LeadingSubPath } from '@typelink/core';
-
-type MyRoutes = SubPath<'users/[userId]'>; // 'users/[userId]' | 'users'
-
-type MyRoutes = LeadingSubPath<'/users/[userId]'>; // '/users/[userId]' | '/users'
-```
-
 ## Upcoming features
 
-- 🚧 Type-safe **query params**
 - 🚧 Tighter framework integration (include components, router methods etc.)
 
 ## Limitations
