@@ -1,0 +1,12 @@
+---
+import type { Href } from '#typelink';
+
+type Props = Omit<astroHTML.JSX.AnchorHTMLAttributes, 'href'> & {
+  href: Href;
+};
+const props = Astro.props;
+---
+
+<a {...props}>
+  <slot />
+</a>
