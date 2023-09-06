@@ -6,7 +6,7 @@
     "astro": "2.x"
   },
   "devDependencies": {
-    "astro": "^2.10.0"
+    "astro": "^2.10.15"
   },
   "dependencies": {
     "@typelink/watcher": "workspace:*"
