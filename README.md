@@ -309,6 +309,7 @@ export const Link = NextLink as React.ForwardRefExoticComponent<LinkProps>;
 
 ## Upcoming features
 
+- 🚧 Hash support
 - 🚧 Tighter framework integration (include components, router methods etc.)
 - 🚧 Warn on conflicting parameters (path/query)
 - 🚧 First-class validation support
