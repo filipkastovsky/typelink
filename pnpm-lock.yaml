@@ -93,6 +93,50 @@ importers:
         specifier: ^0.31.4
         version: 0.31.4(@vitest/ui@0.31.4)(jsdom@20.0.3)
 
+  dist/packages/astro:
+    dependencies:
+      '@typelink/watcher':
+        specifier: workspace:*
+        version: link:../../../packages/watcher
+    devDependencies:
+      astro:
+        specifier: ^2.10.15
+        version: 2.10.15(@types/node@18.7.1)
+
+  dist/packages/core: {}
+
+  dist/packages/utils:
+    dependencies:
+      '@types/micromatch':
+        specifier: ^4.0.2
+        version: 4.0.2
+      fast-glob:
+        specifier: ^3.3.1
+        version: 3.3.1
+      micromatch:
+        specifier: ^4.0.5
+        version: 4.0.5
+    devDependencies:
+      '@types/node':
+        specifier: 18.7.1
+        version: 18.7.1
+      typescript:
+        specifier: ~5.0.4
+        version: 5.0.4
+
+  dist/packages/watcher:
+    dependencies:
+      '@typelink/core':
+        specifier: workspace:*
+        version: link:../../../packages/core
+      '@typelink/utils':
+        specifier: workspace:*
+        version: link:../../../packages/utils
+    devDependencies:
+      chokidar:
+        specifier: ^3.5.3
+        version: 3.5.3
+
   packages/astro:
     dependencies:
       '@typelink/watcher':

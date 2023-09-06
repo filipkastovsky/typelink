@@ -1,39 +1,29 @@
 {
-  "name": "next-t3-watcher",
-  "version": "0.1.0",
-  "private": true,
+  "name": "astro-theme-stone",
+  "type": "module",
+  "version": "1.0.0",
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "^0.6.0",
-    "@typelink/core": "0.0.1-rc.7",
-    "next": "^13.4.13",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "zod": "^3.21.4"
+    "@alpinejs/collapse": "3.12.3",
+    "@astrojs/tailwind": "4.0.0",
+    "@fontsource/inter": "5.0.8",
+    "@typelink/core": "0.0.1-rc.8",
+    "@types/alpinejs": "3.7.2",
+    "alpinejs": "3.12.3",
+    "astro": "2.10.13",
+    "astro-compress": "2.0.14",
+    "prettier": "3.0.2",
+    "prettier-plugin-astro": "0.12.0",
+    "prettier-plugin-tailwindcss": "0.5.3",
+    "tailwindcss": "3.3.3"
   },
   "devDependencies": {
-    "@typelink/watcher": "0.0.1-rc.7",
-    "@types/eslint": "^8.44.2",
-    "@types/node": "^18.16.0",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.3.0",
-    "@typescript-eslint/parser": "^6.3.0",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.47.0",
-    "eslint-config-next": "^13.4.13",
-    "postcss": "^8.4.27",
-    "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.5.1",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.1.6"
-  },
-  "ct3aMetadata": {
-    "initVersion": "7.19.0"
+    "@typelink/adapter-astro": "0.0.1-rc.8"
   }
 }
