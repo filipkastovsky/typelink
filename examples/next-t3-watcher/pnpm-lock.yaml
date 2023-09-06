@@ -8,6 +8,9 @@ dependencies:
   '@t3-oss/env-nextjs':
     specifier: ^0.6.0
     version: 0.6.1(typescript@5.2.2)(zod@3.22.2)
+  '@typelink/core':
+    specifier: 0.0.1-rc.7
+    version: 0.0.1-rc.7
   next:
     specifier: ^13.4.13
     version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
@@ -22,6 +25,9 @@ dependencies:
     version: 3.22.2
 
 devDependencies:
+  '@typelink/watcher':
+    specifier: 0.0.1-rc.7
+    version: 0.0.1-rc.7(chokidar@3.5.3)(typescript@5.2.2)
   '@types/eslint':
     specifier: ^8.44.2
     version: 8.44.2
@@ -314,6 +320,36 @@ packages:
       zod: 3.22.2
     dev: false
 
+  /@typelink/core@0.0.1-rc.7:
+    resolution: {integrity: sha512-ViUBBESNDPEjbYGwsmGBSCseHNggCeA4PQrdUtgStIu0/96+W6EezFBst/t7HNgeNHI8423wZeYXaNHqEl3pvQ==}
+
+  /@typelink/utils@0.0.1-rc.7(typescript@5.2.2):
+    resolution: {integrity: sha512-1FEIsd2Mt/WCI4COjAzbcglBGNkEV1vNK/UXoV50LxW3KAHNwDSu2wogk77eHwDD1u2vqE2bfirqvFct7mYuMw==}
+    peerDependencies:
+      typescript: 4.x || 5.x
+    dependencies:
+      '@types/micromatch': 4.0.2
+      fast-glob: 3.3.1
+      micromatch: 4.0.5
+      typescript: 5.2.2
+    dev: true
+
+  /@typelink/watcher@0.0.1-rc.7(chokidar@3.5.3)(typescript@5.2.2):
+    resolution: {integrity: sha512-+k5z2n/DbKh/kLfl/EFIe1tz8kqRCoUVttqlz/ELoZIuW4MZRqfOaq7u3ExOVHBhJBqgekYsOS/b3yfKJOnn3w==}
+    peerDependencies:
+      chokidar: ^3.5.3
+    dependencies:
+      '@typelink/core': 0.0.1-rc.7
+      '@typelink/utils': 0.0.1-rc.7(typescript@5.2.2)
+      chokidar: 3.5.3
+    transitivePeerDependencies:
+      - typescript
+    dev: true
+
+  /@types/braces@3.0.2:
+    resolution: {integrity: sha512-U5tlMYa0U/2eFTmJgKcPWQOEICP173sJDa6OjHbj5Tv+NVaYcrq2xmdWpNXOwWYGwJu+jER/pfTLdoQ31q8PzA==}
+    dev: true
+
   /@types/eslint@8.44.2:
     resolution: {integrity: sha512-sdPRb9K6iL5XZOmBubg8yiFp5yS/JdUDQsq5e6h95km91MCYMuvp7mh1fjPEYUhvHepKpZOjnEaMBR4PxjWDzg==}
     dependencies:
@@ -331,6 +367,12 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/micromatch@4.0.2:
+    resolution: {integrity: sha512-oqXqVb0ci19GtH0vOA/U2TmHTcRY9kuZl4mqUxe0QmJAlIW13kzhuK5pi1i9+ngav8FjpSb9FVS/GE00GLX1VA==}
+    dependencies:
+      '@types/braces': 3.0.2
     dev: true
 
   /@types/node@18.17.14:
