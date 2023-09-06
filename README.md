@@ -231,7 +231,7 @@ Now, a package `#typelink` should be available in your project. This package exp
 import type { Href } from "#typelink";
 
 type Props = Omit<astroHTML.JSX.AnchorHTMLAttributes, "href"> & {
-  href: Routes;
+  href: Href;
 };
 const props = Astro.props;
 ---
