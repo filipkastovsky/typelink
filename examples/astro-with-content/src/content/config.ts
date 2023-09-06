@@ -1,4 +1,12 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z, type CollectionEntry } from 'astro:content';
+import type { FromUnion } from '@typelink/core';
+import type { FSHref } from '#typelink';
+
+const base = '/blog' satisfies FSHref;
+declare module '#typelink' {
+  export type Content = `${typeof base}/${CollectionEntry<'blog'>['slug']}`;
+  interface Routes extends FromUnion<Content> {}
+}
 
 const blog = defineCollection({
   // Type-check frontmatter using a schema

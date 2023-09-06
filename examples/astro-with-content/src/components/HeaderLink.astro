@@ -1,7 +1,9 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { Href } from '#typelink';
 
-type Props = HTMLAttributes<'a'>;
+type Props = Omit<astroHTML.JSX.AnchorHTMLAttributes, "href"> & {
+  href: Href;
+};
 
 const { href, class: className, ...props } = Astro.props;
 

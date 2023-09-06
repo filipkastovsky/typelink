@@ -13,6 +13,10 @@
     "@astrojs/mdx": "^1.0.0",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
+    "@typelink/core": "0.0.1-rc.7",
     "astro": "^3.0.8"
+  },
+  "devDependencies": {
+    "@typelink/adapter-astro": "0.0.1-rc.7"
   }
 }
