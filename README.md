@@ -43,7 +43,7 @@ Many frameworks use a special syntax for creating dynamic routes. For example, i
 
 In order to support multiple schemas, we let you define your own schema and provide a couple of defaults for popular formats for you.
 
-> Importing `Dynamic` opts-out of **zero bundle size** (includes a lightweight matcher weighing in <500B uncompressed)
+> Importing `Dynamic` without `type` modifier opts-out of **zero bundle size** (includes a lightweight url builder weighing in <500B uncompressed)
 
 ```ts
 // any file
@@ -173,6 +173,10 @@ declare module '#typelink' {
 Doing this will generate a union of all the routes defined in the object. You can then use `FromUnion` to add them to your `Routes` type. This is useful when you want to define a lot of routes in a single file. We recommend you use this pattern sparingly (or not at all).
 
 > This definition does not support query params. If you need query params, you can however still use the [above pattern](#type-safe-query-params) utilizing `Q`. This can however lead to accidental redefinition and potential for dead code down the line.
+
+#### OptionalHash (advanced)
+
+More an internal util than anything alse, but might be useful when customizing the library beyond defaults. This utility allows you to make a optional `#{content}` segment behind any string in a type-safe manner. Your paths are processed through this utility before given to you when using `Href`.
 
 ## Quick Start
 
@@ -309,7 +313,6 @@ export const Link = NextLink as React.ForwardRefExoticComponent<LinkProps>;
 
 ## Upcoming features
 
-- 🚧 Hash support
 - 🚧 Tighter framework integration (include components, router methods etc.)
 - 🚧 Warn on conflicting parameters (path/query)
 - 🚧 First-class validation support
@@ -325,6 +328,8 @@ At this point, we are requiring a [`FSWatcher`](https://github.com/paulmillr/cho
 ### @typelink/core
 
 When declaring dynamic paths, it is possible to use the TS `string` type in a way similar to `/users/{string}` to denote dynamic segments. This would not require any runtime utility and would thus make the library **truly zero-bundle**. However, this fails when using multiple dynamic segments or really when there is any segment following the dynamic part, as `string` will consume **any string** including the separators which follow. Due to current TS limitations, it is unfortunately not possible to set subtract from `string`, which would make this approach viable.
+
+> However, we actually use this system to make our type-system accept url hashes. As there is always only at most a single hash!
 
 ## Contributing
 
