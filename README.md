@@ -43,7 +43,7 @@ Many frameworks use a special syntax for creating dynamic routes. For example, i
 
 In order to support multiple schemas, we let you define your own schema and provide a couple of defaults for popular formats for you.
 
-> Using this feature opts-out of **zero bundle size** (but still weighing in <500B uncompressed: essentially free)
+> Importing `Dynamic` opts-out of **zero bundle size** (includes a lightweight matcher weighing in <500B uncompressed)
 
 ```ts
 // any file
@@ -100,8 +100,6 @@ declare module '#typelink' {
 ### Type-safe query params
 
 When declaring routes, you can also declare query params our `Dynamic` helper will now require to provide.
-
-> Using this feature opts-out of **zero bundle size** (but still weighing in <500B uncompressed: essentially free)
 
 We highly encourage you to use this feature with our `Query` (aliased to `Q` type helper) to make sure we don't accidentally break your code if we ever change the interface we use to handle query params.
 
