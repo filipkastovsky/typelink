@@ -71,7 +71,7 @@ You can manually declare routes by extending existing types. This is useful when
 
 declare module '#typelink' {
   interface Routes {
-    '/my-route': {};
+    '/my-route': unknown;
   }
 }
 
@@ -83,8 +83,8 @@ declare module '#typelink' {
 
 declare module '#typelink' {
   interface Routes {
-    '/my-route/[other]': {};
-    '/my-route/[other]/[other2]': {};
+    '/my-route/[other]': unknown;
+    '/my-route/[other]/[other2]': unknown;
   }
 }
 
