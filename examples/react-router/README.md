@@ -1,27 +1,7 @@
-# React + TypeScript + Vite
+# React Router manual route declaration example
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this example we will utilize manual route declaration to define type-safe routes for our project. This project was bootstrapped with [`vite`](https://vitejs.dev/) and modified to demonstrate the usage of `@typelink/core`. Pages and examples inspired by `next-t3-watcher` example.
 
-Currently, two official plugins are available:
+## (Optional) Automatic route discovery
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+It is possible to use `@typelink/watcher` with the exact same config as in `next-t3-watcher` example! `typelink` does not care what framework you use, if you structure your project in a way that `@typelink/watcher` can find your routes, it will always work.
