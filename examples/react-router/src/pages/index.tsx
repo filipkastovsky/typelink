@@ -1,4 +1,11 @@
+import type { Q } from '@typelink/core';
 import Header from '../components/Header';
+
+declare module '#typelink' {
+  interface Routes {
+    '/': Q<never>;
+  }
+}
 
 export default function Home() {
   return (

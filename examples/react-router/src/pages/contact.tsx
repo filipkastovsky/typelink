@@ -1,4 +1,12 @@
+import type { Q } from '@typelink/core';
+
 import Header from '../components/Header';
+
+declare module '#typelink' {
+  interface Routes {
+    '/contact': Q<never>;
+  }
+}
 
 export default function Contact() {
   return (
